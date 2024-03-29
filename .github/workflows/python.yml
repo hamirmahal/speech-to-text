@@ -7,5 +7,7 @@ jobs:
       - uses: actions/checkout@v4
       # Install pyaudio dependencies
       - run: sudo apt-get install portaudio19-dev
-      - run: pip install -r requirements.txt
+      - run: pip install SpeechRecognition
+      - run: pip install pyperclip
+      - run: pip install pyaudio
       - run: python3 src/main.py
