@@ -1,0 +1,11 @@
+name: Run
+on: [push]
+jobs:
+  python-program:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Install pyaudio dependencies
+      - run: sudo apt-get install portaudio19-dev
+      - run: pip install -r requirements.txt
+      - run: python3 src/main.py
